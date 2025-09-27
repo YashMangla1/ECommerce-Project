@@ -30,3 +30,5 @@ for backend to respond. Code is going line by line. Then at some point in the fu
 response.json() is also a asynchronous. we cannot stored it in a variable.
 
 Axios= cleaner way to make requests to the backend
+useEffect()= lets us control when some code runs
+Dependancy Array- lets us control when useEffect runs
