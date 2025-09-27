@@ -28,3 +28,5 @@ for backend to respond. Code is going line by line. Then at some point in the fu
 .json= gives us the data attached to the response
 
 response.json() is also a asynchronous. we cannot stored it in a variable.
+
+Axios= cleaner way to make requests to the backend
