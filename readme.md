@@ -34,3 +34,13 @@ useEffect()= lets us control when some code runs
 Dependancy Array- lets us control when useEffect runs
 API - Application Programming Interface
 /api- these URL paths are for interacting with the backend
+
+?expand=product- it is called query parameter, let us add additional info to our request
+
+for fetching the data from Backend:::
+We'll create some state to save the data using useState, we need to give the name and updater function inside the [deliveryOptions, setDeliveryOptions]
+Now, we'll get the delivery options from the backend
+useEffect, we'll give a function and in the end we'll give an empty dependancy array, so that code runs ones only.
+axios.get(api)
+then we're going to wait for the response to come back using .then and we'll give a function and inside the function, the response from the backend will be saved as the response parameter.
+once we get the response we'll save it up in the deliveryOptions using setDeliveryOptions(response.data)
