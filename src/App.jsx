@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { OrdersPage } from "./pages/orders/OrdersPage";
 import { CheckoutPage } from "./pages/checkout/CheckoutPage";
 import { Routes, Route } from "react-router";
-
+import { TrackingPage } from "./pages/orders/TrackingPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,11 @@ function App() {
       <Route index element={<HomePage cart={cart} loadCart={loadCart} />} />
       <Route path="checkout" element={<CheckoutPage cart={cart} />} />
       <Route path="orders" element={<OrdersPage cart={cart} />} />
+      <Route
+        path="tracking/:orderId/:productId"
+        element={<TrackingPage cart={cart} />}
+      ></Route>
+      <Route path="*" element={<NotFoundPage cart={cart} />} />
     </Routes>
   );
 }
