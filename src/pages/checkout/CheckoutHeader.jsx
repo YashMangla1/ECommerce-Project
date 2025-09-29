@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export function CheckoutHeader({ cart }) {
   let totalQuantity = 0;
   cart.forEach((cartItem) => {
@@ -8,17 +10,17 @@ export function CheckoutHeader({ cart }) {
     <div className="checkout-header">
       <div className="header-content">
         <div className="checkout-header-left-section">
-          <a href="/">
+          <Link href="/">
             <img className="logo" src="images/logo.png" />
             <img className="mobile-logo" src="images/mobile-logo.png" />
-          </a>
+          </Link>
         </div>
 
         <div className="checkout-header-middle-section">
           Checkout (
-          <a className="return-to-home-link" href="/">
+          <Link className="return-to-home-link" href="/">
             {totalQuantity} items
-          </a>
+          </Link>
           )
         </div>
 
