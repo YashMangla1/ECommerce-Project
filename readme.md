@@ -46,8 +46,11 @@ If you are developing a production application, we recommend using TypeScript wi
   once we get the response we'll save it up in the deliveryOptions using setDeliveryOptions(response.data)
 
 - Asynch Await= lets us write asynchronous code like normal code
+
   \*\* When we write await in front of axios.get, it is going to wait for this code to finish, then it's going to move on the next line, we're waiting for this code to finish we can actually save this result in a variable.
+
   \*\* In order to write await we should be asynchronous function.When we use async await with useEffect, when we put async in front of a function that function will return a promise because that has some asynchronous code.
+
   \*\* Problem is inner function in useEffect should not return a prosmise, it should return nothing or clean up function. What we'll do to get rid of this problem is we'll create a new function inside useEffect like const getHomeData and will make it async and move our await code inside this and at the end just need to run this function.
 
   \*\* we use <strictmode>, but strictMode runs useEffect twice. Running twice helps us catch bugs.(Running useEffect twice should result in the same HTML being rendered. This is called idempotency).
@@ -55,4 +58,4 @@ If you are developing a production application, we recommend using TypeScript wi
   \*\* when we send a request to the backend, we can set a url path. Based on the URL path, the backend can do different things. like- /api/products = gives us the products. In addition to the URl path every request also has a type.
   axios.get('')- it sends 2 pieces of information:1. type 2. URl path , When backend receives our request, it looks for both type and the URL path, to decide what to do. Type is also called HTTP method.
 
-  \*\* 4 common types of requests: 1. GET 2. POST 3. PUT 4. DELETE
+  \*\* 4 common types of requests: 1. GET 2. POST 3. PUT 4. DELETE- Delete the data from table
