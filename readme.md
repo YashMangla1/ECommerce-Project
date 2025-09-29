@@ -49,3 +49,5 @@ If you are developing a production application, we recommend using TypeScript wi
   \*\* When we write await in front of axios.get, it is going to wait for this code to finish, then it's going to move on the next line, we're waiting for this code to finish we can actually save this result in a variable.
   \*\* In order to write await we should be asynchronous function.When we use async await with useEffect, when we put async in front of a function that function will return a promise because that has some asynchronous code.
   \*\* Problem is inner function in useEffect should not return a prosmise, it should return nothing or clean up function. What we'll do to get rid of this problem is we'll create a new function inside useEffect like const getHomeData and will make it async and move our await code inside this and at the end just need to run this function.
+
+  \*\* we use <strictmode>, but strictMode runs useEffect twice. Running twice helps us catch bugs.(Running useEffect twice should result in the same HTML being rendered. This is called idempotency).
